@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -12,7 +14,6 @@ import android.widget.SearchView;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.List;
 
 import ca.uhn.fhir.model.api.BundleEntry;
 import ca.uhn.fhir.model.dstu2.resource.Patient;
@@ -90,6 +91,27 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             Intent patientIntent = new Intent(this,PatientActivity.class);
             patientIntent.putExtra("patientID",patient.getId().getValue());
             startActivity(patientIntent);
+        }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.appbar_add, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.add_patient:
+                Intent addIntent = new Intent(this,AddPatientActivity.class);
+                startActivity(addIntent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

@@ -26,12 +26,12 @@ android {
         exclude 'META-INF/NOTICE.txt'
         exclude 'META-INF/NOTICE.txt'
     }
-
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
     compile (group: 'ca.uhn.hapi.fhir', name: 'hapi-fhir-android', version: '1.4-SNAPSHOT', classifier: 'dstu2') {
         exclude module: 'javax.servlet-api'
         exclude module: 'hapi-fhir-base'

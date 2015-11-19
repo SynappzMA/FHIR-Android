@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Fhir</string>
+    <string name="action_add">Add</string>
+    <string name="error">Error</string>
+    <string name="failedvalidation">We failed validation!</string>
+    <string name="done">Done</string>
+    <string name="surname">Surname</string>
+    <string name="givenname">Givenname</string>
+    <string name="inputerror">Input error</string>
+    <string name="action_update">Update</string>
+    <string name="action_delete">Delete</string>
+    <string name="deletepatient">Delete patient?</string>
 </resources>

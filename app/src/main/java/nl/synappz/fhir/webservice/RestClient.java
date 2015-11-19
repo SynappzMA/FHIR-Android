@@ -1,9 +1,13 @@
 package nl.synappz.fhir.webservice;
 
+import android.util.Log;
+
 import java.io.IOException;
 
 import ca.uhn.fhir.context.FhirContext;
+import ca.uhn.fhir.model.dstu2.resource.Conformance;
 import ca.uhn.fhir.rest.client.IGenericClient;
+import nl.synappz.fhir.FhirApp;
 
 public class RestClient {
 
@@ -27,6 +31,4 @@ public class RestClient {
         }
         return iGenericClient;
     }
-
-
 }
