@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hapi-fhir-android-1.4-SNAPSHOT-dstu2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/ca.uhn.hapi.fhir/hapi-fhir-android/1.4-SNAPSHOT/8019da102181a0baeaa57555a528808fe47f9b68/hapi-fhir-android-1.4-SNAPSHOT-dstu2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
