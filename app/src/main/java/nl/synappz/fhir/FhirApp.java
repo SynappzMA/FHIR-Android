@@ -7,6 +7,7 @@ import android.support.multidex.MultiDex;
 public class FhirApp extends Application {
 
     public static String TAG = "FHIR ANDROID";
+    public static Context mContext;
 
     @Override
     protected void attachBaseContext(Context base) {
@@ -17,6 +18,7 @@ public class FhirApp extends Application {
     @Override
     public void onCreate() {
         MultiDex.install(this);
+        mContext = this;
         super.onCreate();
     }
 }

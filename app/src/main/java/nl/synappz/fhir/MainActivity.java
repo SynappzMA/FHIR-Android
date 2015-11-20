@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             Thread searchThread = new Thread() {
                 @Override
                 public void run() {
-                    final ca.uhn.fhir.model.api.Bundle results =  RestClient.getClient().search().forResource(Patient.class).limitTo(100).where(Patient.FAMILY.matches().value(newText)).execute();
+                    final ca.uhn.fhir.model.api.Bundle results =  RestClient.getClient().search().forResource(Patient.class).limitTo(100).where(Patient.FAMILY.matches().value(newText)).encodedXml().execute();
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
